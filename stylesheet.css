@@ -1,0 +1,12 @@
+body{
+    background-color: burlywood;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container{
+    margin: 100px;
+    align-content: center;
+    justify-content: center;
+
+}
+
