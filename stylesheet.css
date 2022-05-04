@@ -1,12 +1,26 @@
 body{
-    background-color: burlywood;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.container{
-    margin: 100px;
-    align-content: center;
+    background-color: aliceblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: auto;
+    padding: 40px;
+  }
+  
+  .container{
+    align-items: center;
     justify-content: center;
+ background-color: sandybrown;
+ padding: 60px;
+ margin: 20px;
+ border-radius: 10px;
+  }
 
-}
+  span{
+      color: bisque;
+      text-size-adjust: 20px;
+  }
+
+  h5{
+      padding-left: 20em;
+      text-shadow: 20px;
+  }
 

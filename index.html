@@ -12,7 +12,9 @@
 <body>
 
     <div class="container">
+        <h5>Alpine Tutorial</h5>
         <div class="hello">
+            <h6>Click event using <span>x-on:click</span></h6>
             <div x-data="{ title: 'Hello Alpine' }">
                 <p x-text="title"></p>
                 <button @click="title='Alpine Rocks!'">click me</button>
@@ -20,6 +22,7 @@
         </div>
 
         <div class="counter">
+            <h6>Create a counter component by simply declaring a <span>count </span>variable</h6>
             <div x-data="{ count: 0 }">
                 <p x-text="count"></p>
                 <button @click="count++">Count Up</button>
@@ -28,57 +31,84 @@
 
         </div>
 
-<div class="countnow">
-    <div x-data="{ countdown: 100 }" x-init="setInterval(function(){
+        <div class="countnow">
+            <h6>An <span>x-init directive</span> that runs a JS code when the componet is initialized</h6>
+            <div x-data="{ countdown: 5 }" x-init="setInterval(function(){
         countdown--;
      }, 1000);
      ">
-    <h1 x-text="countdown"></h1>
-</div>
-
-</div>
-        
-
-
-
-        <p>Toggle</p>
-
-        <div x-data="{ show: false }">
-            <button @click="show=!show">Show</button>
-            <div x-show.transition="show">Hello</div>
-        </div>
-        <div x-data="{ title: 'They are hacked' }">
-            <p x-text="title"></p>
-            <input type="text" x-model="title">
-        </div>
-
-        <div x-data="{ code: '<p>Thi is me trying out the Alpinejs</p>' }">
-            <div x-html="code"></div>
-        </div>
-
-
-        <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
-            <div x-ref="sentence">I am a sentence</div>
-            <button @click="$refs.sentence.innerText = 'I just changed'">Change Sentence</button>
-        </div>
-
-        <div x-data="{ socks: 'blue' }">
-            <template x-if="socks=='blue'">
-                <p>My socks are blue</p>
-            </template>
-
-            <template x-if="socks=='green'">
-                <p>My socks are green</p>
-            </template>
-            <button @click="socks = 'green'">Change Sox</button>
-        </div>
-        <div x-data="{ groceries: ['Milk', 'Eggs', 'Cheese'] }">
-            <p>Groceries</p>
-            <ul>
-                <template x-for="item in groceries">
-                    <li x-text="item"></li>
+              
+                <template x-if="countdown >0">
+                    <h1 x-text="countdown"></h1>
                 </template>
-            </ul>
+
+                <template x-if="countdown == 0">
+                    <h1 x-text="Time up!"></h1> 
+                   
+                    
+                </template>
+
+               
+            </div>
+
+        </div>
+
+
+
+        <div class="toggle">
+            <h6><span>x-show directive</span> that toggle a component with a simple transition using
+                <span>x-show.transition="show"</span>
+            </h6>
+            <div x-data="{ show: false }">
+                <button @click="show=!show">Show</button>
+                <div x-show.transition="show">Hello</div>
+            </div>
+        </div>
+        <div class="bind">
+            <h6>The variable is bound to a form element using <span>x-model directive</span></h6>
+            <div x-data="{ title: 'They are hacked' }">
+                <p x-text="title"></p>
+                <input type="text" x-model="title">
+            </div>
+        </div>
+        <div class="component">
+            <h6>Using the <span>x-html directive,</span> we can add some dynamic HTML inside any element.</h6>
+            <div x-data="{ code: '<p>This is me trying out the Alpinejs</p>' }">
+                <div x-html="code"></div>
+            </div>
+        </div>
+
+        <div class="change">
+            <h6>The<span>x-ref directive</span> allows us to reference any element with the specified name</h6>
+            <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
+                <div x-ref="sentence">I am a sentence</div>
+                <button @click="$refs.sentence.innerText = 'I just changed'">Change Sentence</button>
+            </div>
+        </div>
+        <div class="socks">
+            <h6>Show or hide elements based on a condition using <span>x-if</span></h6>
+            <div x-data="{ socks: 'blue' }">
+                <template x-if="socks=='blue'">
+                    <p>My socks are blue</p>
+                </template>
+
+                <template x-if="socks=='green'">
+                    <p>My socks are green</p>
+                </template>
+                <button @click="socks = 'green'">Change Sox</button>
+            </div>
+        </div>
+
+        <div class="list">
+            <h6>Loop through an array of items using <span>x-for directive</span></h6>
+            <div x-data="{ groceries: ['Milk', 'Eggs', 'Cheese'] }">
+                <p>Groceries</p>
+                <ul>
+                    <template x-for="item in groceries">
+                        <li x-text="item"></li>
+                    </template>
+                </ul>
+            </div>
         </div>
 
     </div>
