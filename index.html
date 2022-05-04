@@ -37,23 +37,69 @@
         countdown--;
      }, 1000);
      ">
-              
-                <template x-if="countdown >0">
+
+                <!-- <template x-if="countdown >0">
                     <h1 x-text="countdown"></h1>
                 </template>
 
                 <template x-if="countdown == 0">
-                    <h1 x-text="Time up!"></h1> 
-                   
-                    
+                    <h1 x-text=0></h1>
+
+
                 </template>
 
-               
+                <button @click="countdown= 5">Start</button>
+                <button @click="countdown= ">Stop</button>
+                <button @click="countdown= 5">reset</button>
+
+            </div>  -->
+
+
+            <div x-data="{
+                countdown : 60,
+                start: null, 
+                current: null, 
+                stop: null, 
+                interval: null, 
+                showReset: false,
+                showStop: false,
+            }">
+        
+                <button x-show="!start" @click="
+                    start = Date.now()
+                    current = start
+                    showStop = true
+                    interval = setInterval(function() {
+                        countdown--;},1000)
+                ">Start</button>
+        
+                <div x-show="!showReset && showStop">
+                    <button @click="
+                       
+                        clearInterval(interval)
+                        showReset = true
+                        showStop = false
+                    ">Stop</button>
+                    <p><span x-text="countdown "></span> Seconds</p>
+                </div>
+        
+                <div x-show="showReset">
+                    <button @click="
+                        start = null
+                        stop = null
+                        showReset = false
+                        showStop = false
+                        countdown = 60
+                    ">Reset</button>
+                    <p><span x-text="countdown"></span> Seconds</p>
+                </div>
+
             </div>
+            
 
         </div>
 
-
+    </div>
 
         <div class="toggle">
             <h6><span>x-show directive</span> that toggle a component with a simple transition using
@@ -95,7 +141,7 @@
                 <template x-if="socks=='green'">
                     <p>My socks are green</p>
                 </template>
-                <button @click="socks = 'green'">Change Sox</button>
+                <button @click="socks = 'green'">Change Socks</button>
             </div>
         </div>
 

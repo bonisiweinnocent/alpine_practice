@@ -23,4 +23,81 @@ body{
       padding-left: 20em;
       text-shadow: 20px;
   }
+.hello{
+    align-items: center;
+    justify-content: center;
+background-color: violet;
+ padding: 30px;
+ margin: 20px;
+ border-radius: 10px;
+}
 
+.counter {
+    align-items: center;
+    justify-content: center;
+background-color: blueviolet;
+ padding: 30px;
+ margin: 20px;
+ border-radius: 10px;  
+}
+
+.countnow {
+    align-items: center;
+    justify-content: center;
+background-color: violet;
+ padding: 30px;
+ margin: 20px;
+ border-radius: 10px;
+}
+
+.toggle{
+    align-items: center;
+    justify-content: center;
+background-color: blueviolet;
+ padding: 30px;
+ margin: 20px;
+ border-radius: 10px  
+}
+
+.bind{
+    align-items: center;
+    justify-content: center;
+background-color: violet;
+ padding: 30px;
+ margin: 20px;
+ border-radius: 10px; 
+}
+
+.component{
+    align-items: center;
+    justify-content: center;
+background-color: blueviolet;
+ padding: 30px;
+ margin: 20px;
+ border-radius: 10px  
+}
+ .change{
+    align-items: center;
+    justify-content: center;
+background-color: violet;
+ padding: 30px;
+ margin: 20px;
+ border-radius: 10px; 
+ }
+ .socks{
+    align-items: center;
+    justify-content: center;
+background-color: blueviolet;
+ padding: 30px;
+ margin: 20px;
+ border-radius: 10px  
+ }
+
+ .list{
+    align-items: center;
+    justify-content: center;
+background-color: violet;
+ padding: 30px;
+ margin: 20px;
+ border-radius: 10px; 
+ }
